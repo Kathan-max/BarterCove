@@ -1,50 +1,78 @@
-# React + TypeScript + Vite
+# BarterCove: Neighborhood Resource Sharing Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+BarterCove is an innovative Neighborhood Resource Sharing application designed to address key challenges faced by Canadian households and communities. Our platform aims to reduce waste generation, alleviate financial strain, strengthen community bonds, conserve resources, and optimize resource distribution through a user-friendly, technology-driven approach.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Problem Statement
 
-## Expanding the ESLint configuration
+Many Canadian communities face issues such as:
+- Excessive waste generation
+- Financial pressures on households
+- Disconnection within communities
+- Depletion of resources
+- Inefficient distribution of available resources
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Our Solution
 
-- Configure the top-level `parserOptions` property like this:
+BarterCove provides a comprehensive platform for peer-to-peer product exchange within local communities. By leveraging innovative technology and fostering community-driven exchanges, we aim to promote sustainable resource use and enhance community connections.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Key Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Peer-to-Peer Exchange System**: 
+   - List items you no longer need
+   - Browse items offered by others in your local community
+   - Facilitate easy exchanges between community members
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. **User Authentication**:
+   - Secure sign-up and login process
+   - Option for Google sign-in
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Product Post Browsing**:
+   - Personalized "For You Page" (FYP) based on user's location and preferences
+   - Easy-to-use interface for discovering available items
+
+4. **Create a Post**:
+   - Simple process to list items for exchange
+   - Upload photos and add detailed product information
+
+5. **Carbon Footprint Calculator**:
+   - Estimate the environmental impact of exchanges
+   - Promote awareness of sustainable practices
+
+6. **Similar Product List**:
+   - Intelligent matching based on carbon footprint and location
+   - Encourage efficient local exchanges
+
+7. **Messaging Service**:
+   - Direct communication between users
+   - Facilitate exchange arrangements
+
+8. **Leaderboard**:
+   - Recognize top contributors to sustainable exchanges
+   - Gamify the experience to encourage participation
+
+9. **User Ratings**:
+   - Build trust within the community
+   - Provide feedback on exchange experiences
+
+## Benefits
+
+- **Reduce Waste**: Extend the lifecycle of products through community exchanges
+- **Financial Relief**: Access needed items without monetary transactions
+- **Strengthen Communities**: Foster connections through local exchanges
+- **Resource Conservation**: Maximize the use of existing resources
+- **Efficient Distribution**: Match resources with those who need them most
+
+## Getting Started
+
+(Include instructions for setting up the project locally, running it, and basic usage guidelines)
+
+## Contributing
+
+We welcome contributions to BarterCove! If you're interested in helping, please:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some YourFeature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request

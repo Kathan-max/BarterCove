@@ -1,12 +1,22 @@
-import React from "react";
+import React from 'react';
+import TopNav from './components/TopNav';
+import { SideNav } from './components/Sidebar';
+import ProductGrid from './components/ProductGrid';
 
-const Dashboard: React.FC = () => {
-    return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="text-2xl">Welcome to the Dashboard</h1>
-            <p>THis is a protected area accessible after logging in.</p>
+const Dashboard = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <TopNav />
+      <SideNav />
+      
+      {/* Main Content - Added pt-16 to account for fixed top nav */}
+      <main className="lg:pl-[240px] pt-16">
+        <div className="max-w-7xl mx-auto p-6"> {/* Changed from p-4 to p-6 for consistency */}
+          <ProductGrid />
         </div>
-    );
+      </main>
+    </div>
+  );
 };
 
 export default Dashboard;

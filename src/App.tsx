@@ -7,6 +7,7 @@ import StatefulLoginForm from '@/components/StatefulLoginForm';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from './Dashboard';
 import './App.css'
+import MessagingWidget from './components/MessagingWidget';
 
 
 const App = () => {

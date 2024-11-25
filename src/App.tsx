@@ -2,7 +2,8 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import { Button } from '@/components/ui/button';
-import { LoginForm } from '@/components/LoginForm';
+import LoginForm from './components/LoginForm';
+import RegisterForm from './components/RegisterForm';
 import StatefulLoginForm from '@/components/StatefulLoginForm';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from './Dashboard';
@@ -14,7 +15,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<StatefulLoginForm />} />
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm/>}/>
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
   </Router>

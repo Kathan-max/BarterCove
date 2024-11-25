@@ -2,9 +2,10 @@
     "name": "messaging-backend",
     "version": "1.0.0",
     "scripts": {
-      "dev": "ts-node-dev --respawn --transpile-only server.ts",
+      "start": "node dist/server.js",
+      "dev": "ts-node src/server.ts",
       "build": "tsc",
-      "start": "node dist/server.js"
+      "watch": "tsc -w"
     },
     "dependencies": {
       "cors": "^2.8.5",

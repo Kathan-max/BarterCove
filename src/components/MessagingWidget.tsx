@@ -30,7 +30,7 @@ interface MessagingWidgetProps {
 
 // Mock friends data
 const mockFriends: Friend[] = [
-  { id: '1', name: 'Alice Johnson', lastSeen: '2 mins ago' },
+  { id: '84KoePm8FzO1NHSW2jep7cIeMnR2', name: 'Alice Johnson', lastSeen: '2 mins ago' },
   { id: '2', name: 'Bob Smith', lastSeen: '5 mins ago' },
   { id: '3', name: 'Carol White', lastSeen: 'Just now' },
   { id: '4', name: 'David Brown', lastSeen: '1 hour ago' },
@@ -110,8 +110,8 @@ const MessagingWidget = ({ userId, onClose }: MessagingWidgetProps) => {
   const availableFriends = mockFriends.filter(friend => friend.id !== userId);
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <Card className="w-80">
+    <div className="fixed bottom-4 right-4 z-[100]">
+      <Card className="w-80 shadow-2xl">
         <CardHeader className="p-4">
           <CardTitle className="text-lg flex items-center gap-2">
             {selectedFriend ? (

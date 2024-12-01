@@ -30,7 +30,7 @@ interface MessagingWidgetProps {
 
 // Mock friends data
 const mockFriends: Friend[] = [
-  { id: '84KoePm8FzO1NHSW2jep7cIeMnR2', name: 'Alice Johnson', lastSeen: '2 mins ago' },
+  { id: 'oOmpxoqJJgd2GiovqWVGnsaErVM2', name: 'Alice Johnson', lastSeen: '2 mins ago' },
   { id: '2', name: 'Bob Smith', lastSeen: '5 mins ago' },
   { id: '3', name: 'Carol White', lastSeen: 'Just now' },
   { id: '4', name: 'David Brown', lastSeen: '1 hour ago' },

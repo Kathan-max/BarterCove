@@ -6,10 +6,11 @@ const userSchema = new mongoose.Schema<User>({
   email: { type: String, required: true, unique: true },
   username: { type: String, required: true, unique: true },
   pincode: { type: String, required: true },
+  phoneNumber: { type: String, required: true, unique: true },
   createdAt: { type: Date, default: Date.now },
-  
+  isPhoneVerified: { type: Boolean, default: false }
 }, {
-  collection: 'User' // This explicitly sets the collection name
+  collection: 'User'
 });
 
 export const UserModel = mongoose.model<User>('User', userSchema);

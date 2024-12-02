@@ -6,10 +6,12 @@ export interface Message {
     timestamp: string;
   }
   
-  export interface User {
-    firebaseUid: string;
-    email: string;
-    username: string;
-    pincode: string;
-    createdAt: Date;
-  }
+export interface User {
+  firebaseUid: string;
+  email: string;
+  username: string;
+  pincode: string;
+  phoneNumber: string;
+  createdAt: Date;
+  isPhoneVerified?: boolean;
+}

@@ -12,7 +12,6 @@ interface Friend {
   id: string;
   name: string;
   avatar?: string;
-  lastSeen: string;
 }
 
 interface Message {
@@ -30,10 +29,8 @@ interface MessagingWidgetProps {
 
 // Mock friends data
 const mockFriends: Friend[] = [
-  { id: 'oOmpxoqJJgd2GiovqWVGnsaErVM2', name: 'Alice Johnson', lastSeen: '2 mins ago' },
-  { id: '2', name: 'Bob Smith', lastSeen: '5 mins ago' },
-  { id: '3', name: 'Carol White', lastSeen: 'Just now' },
-  { id: '4', name: 'David Brown', lastSeen: '1 hour ago' },
+  { id: 'mE99PDS2h7Xmj4E4BPbXkHAcKJk2', name: 'kathan_123'},
+  { id: 'b9q6dduX77SATd9sdUqrLR2Aj343', name: 'kathan_126'},
 ];
 
 const MessagingWidget = ({ userId, onClose }: MessagingWidgetProps) => {
@@ -155,10 +152,7 @@ const MessagingWidget = ({ userId, onClose }: MessagingWidgetProps) => {
                       <AvatarFallback>{getInitials(friend.name)}</AvatarFallback>
                     )}
                   </Avatar>
-                  <div>
-                    <div className="font-medium">{friend.name}</div>
-                    <div className="text-sm text-gray-500">{friend.lastSeen}</div>
-                  </div>
+              
                 </div>
               ))}
             </ScrollArea>

@@ -25,6 +25,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Uploads directory for static file serving
+app.use('/uploads', express.static('uploads'));
+
 // Routes
 app.use(userRoutes);
 
@@ -32,3 +35,5 @@ const PORT = process.env.PORT || 3000;
 httpServer.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+export default app;

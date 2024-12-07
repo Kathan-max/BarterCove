@@ -44,6 +44,7 @@ const RegisterForm = () => {
   const [isOtpVerified, setIsOtpVerified] = useState(false);
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [phoneNumberValue, setPhoneNumberValue] = useState("+1");
+  const [avatarLink, setAvatarLink] = useState<string | null>(null);
   const navigate = useNavigate();
   const recaptchaVerifierRef = useRef<RecaptchaVerifier | null>(null);
 
@@ -132,6 +133,12 @@ const RegisterForm = () => {
         if (!response.ok) {
           throw new Error('Failed to save user data');
         }
+        const userResponse = await fetch(`http://localhost:3000/api/users/getUserByUsername/${username}`);
+        const userData = await userResponse.json();
+        if (!userResponse.ok) {
+          throw new Error("Failed to fetch user details");
+        }
+        setAvatarLink(userData.avatarLink); 
       } 
       // If OTP is verified, complete registration
       else if (isOtpVerified) {

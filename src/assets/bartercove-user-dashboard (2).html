@@ -1,0 +1,234 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarterCove User Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+  <style>
+    /* Custom styles */
+    .dashboard-card {
+      @apply bg-white rounded-lg shadow-md p-6;
+    }
+    .dashboard-icon {
+      @apply h-8 w-8 text-primary;
+    }
+    .exchange-item {
+      @apply flex items-center justify-between border-b border-gray-200 py-4;
+    }
+    .exchange-status {
+      @apply px-3 py-1 rounded-full text-xs font-semibold;
+    }
+    .exchange-status.pending {
+      @apply bg-yellow-100 text-yellow-600;
+    }
+    .exchange-status.confirmed {
+      @apply bg-green-100 text-green-600;
+    }
+    .leaderboard-item {
+      @apply flex items-center justify-between py-2;
+    }
+    .leaderboard-item .rank {
+      @apply bg-primary text-white font-medium px-2 py-1 rounded-full text-xs;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="container mx-auto py-8">
+    <header class="flex items-center justify-between mb-6">
+      <div class="flex items-center">
+        <a href="#" class="text-2xl font-bold text-primary">BarterCove</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-2">
+          <img src="/api/placeholder/40/40" alt="User Avatar" class="rounded-full">
+          <div>
+            <div class="font-medium">John Doe</div>
+            <div class="text-gray-500 text-sm">Toronto, Canada</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="dashboard-card">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-semibold">My Exchanges</h2>
+          <svg class="dashboard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 16L12 12M12 12V8M12 12H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between">
+            <div class="text-gray-500">Total Exchanges</div>
+            <div class="font-medium">145</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">Items Shared</div>
+            <div class="font-medium">312</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">Items Received</div>
+            <div class="font-medium">298</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-semibold">My Impact</h2>
+          <svg class="dashboard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between">
+            <div class="text-gray-500">CO2 Saved</div>
+            <div class="font-medium">1,254 kg</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">New Items Avoided</div>
+            <div class="font-medium">78</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">Community Connections</div>
+            <div class="font-medium">54</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-semibold">Upcoming Exchanges</h2>
+          <svg class="dashboard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <div class="exchange-item">
+            <div class="flex items-center space-x-4">
+              <div class="w-16 h-16 rounded-lg overflow-hidden">
+                <img src="/api/placeholder/80/80" alt="Item Image" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <div class="font-medium">Mountain Bike</div>
+                <div class="text-gray-500 text-sm">Dec 15, 2023</div>
+              </div>
+            </div>
+            <div class="exchange-status pending">Pending</div>
+          </div>
+          <div class="exchange-item">
+            <div class="flex items-center space-x-4">
+              <div class="w-16 h-16 rounded-lg overflow-hidden">
+                <img src="/api/placeholder/80/80" alt="Item Image" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <div class="font-medium">Vintage Lamp</div>
+                <div class="text-gray-500 text-sm">Dec 20, 2023</div>
+              </div>
+            </div>
+            <div class="exchange-status confirmed">Confirmed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div class="dashboard-card">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-semibold">My Activity</h2>
+          <svg class="dashboard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between">
+            <div class="text-gray-500">Total Visits</div>
+            <div class="font-medium">312</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">Posts Made</div>
+            <div class="font-medium">56</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">Connections Made</div>
+            <div class="font-medium">84</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-semibold">Sustainability Metrics</h2>
+          <svg class="dashboard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between">
+            <div class="text-gray-500">CO2 Emissions Avoided</div>
+            <div class="font-medium">1,254 kg</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">New Items Avoided</div>
+            <div class="font-medium">78</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-gray-500">Waste Reduction</div>
+            <div class="font-medium">3,425 kg</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-semibold">Community Leaderboard</h2>
+          <svg class="dashboard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="space-y-4">
+          <div class="leaderboard-item">
+            <div class="flex items-center space-x-2">
+              <div class="rank">1</div>
+              <div class="font-medium">John Doe</div>
+            </div>
+            <div class="font-medium text-primary">258 XP</div>
+          </div>
+          <div class="leaderboard-item">
+            <div class="flex items-center space-x-2">
+              <div class="rank">2</div>
+              <div class="font-medium">Jane Smith</div>
+            </div>
+            <div class="font-medium text-primary">217 XP</div>
+          </div>
+          <div class="leaderboard-item">
+            <div class="flex items-center space-x-2">
+              <div class="rank">3</div>
+              <div class="font-medium">Michael Johnson</div>
+            </div>
+            <div class="font-medium text-primary">192 XP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-8 text-center text-gray-500 text-sm">
+      <div class="flex justify-center space-x-4">
+        <a href="#">Provably Fair</a>
+        <a href="#">Support</a>
+        <a href="#">About</a>
+      </div>
+      <div class="mt-2">&copy; 2023 BarterCove. All rights reserved.</div>
+    </footer>
+  </div>
+</body>

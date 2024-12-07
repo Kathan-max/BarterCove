@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from './ui/button';
+import ProductSelectionWidget from './ProductSelectionWidget';
 import { Products } from '../../backend/src/types/index';
 
 interface ProductCardProps {
   product: Products;
+  userId: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const fullImagePath = product.imagePath 
+const ProductCard2: React.FC<ProductCardProps> = ({ product, userId }) => {
+    const [showWidget, setShowWidget] = useState(false);
+
+    const handleRequestClick = () => {
+        setShowWidget(true);
+      };
+
+    const fullImagePath = product.imagePath 
     ? `${'../../backend/src'}/${product.imagePath}`
     : undefined;
   return (
@@ -64,4 +73,4 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default ProductCard2;
